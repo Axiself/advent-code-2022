@@ -3,20 +3,39 @@
 #include <iostream>
 using namespace std;
 
+void printArray(int a[], int size) {
+    for(int i=0; i < size; i++) {
+        cout << a[i];
+        cout << " ";
+    }
+    cout << "\n";
+}
 
 int main() {
     int current = 0;
-    int max = 0;
+    int max[3] = {0,0,0};
+    int pos, i, r, flag = 0;
     string a;
     while(1) {
-        //cin >> a;
         getline(cin, a);
         if(a == "") {
-            if(current > max)
-                max = current;
+            flag = 0;
+            for(i = 0; i < 3; i++) {
+                if(current >= max[i]) {
+                    pos = i;
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag) {
+                for(i = 2; i > pos; i--)
+                    max[i] = max[i-1];
+                max[pos] = current;
+            }
             current = 0;
         } else if(a == "q") {
-            cout << max;
+            r = max[0]+max[1]+max[2];
+            cout << r;
             cout << '\n';
             return 0;
         } else {
