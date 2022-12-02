@@ -35,12 +35,10 @@ int main() {
             current = 0;
         } else if(a == "q") {
             r = max[0]+max[1]+max[2];
-            cout << r;
-            cout << '\n';
+            cout << r << "\n";
             return 0;
         } else {
             current += stoi(a);
         }
     }
-
 }
