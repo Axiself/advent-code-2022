@@ -4,8 +4,8 @@
 using namespace std;
 
 int charValue(char a) {
-    if(isupper(a)) return int(a) - 65 + 27;
-    else return int(a) - 97 + 1;
+    if(isupper(a)) return int(a) - int('A') + 27;
+    else return int(a) - int('a') + 1;
 }
 
 int main() {
