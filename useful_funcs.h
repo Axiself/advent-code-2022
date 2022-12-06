@@ -6,6 +6,16 @@
 #include <algorithm>
 using namespace std;
 
+/*------------------------------------------DAY 1------------------------------------------*/
+
+void printArray(int a[], int size) {
+    for(int i=0; i < size; i++) {
+        cout << a[i];
+        cout << " ";
+    }
+    cout << "\n";
+}
+
 /*------------------------------------------DAY 3------------------------------------------*/
 
 int len(string str) {
@@ -32,6 +42,19 @@ void split (string str, char seperator, string strings[]) {
 }
 
 /*------------------------------------------DAY 5------------------------------------------*/
+
+void printTable(vector<vector<char>> table) {
+    int i, j;
+    for(i = 0; i < table.size(); i++) {
+        cout << "[ ";
+        for(j = 0; j < table[i].size(); j++) {
+            cout << table[i][j] << " ";
+        }
+        cout << "]\n";
+    }
+}
+
+/*------------------------------------------DAY 6------------------------------------------*/
 
 int findChar(vector<char> v, char key) {
     for(int i = 0; i < v.size(); i++)

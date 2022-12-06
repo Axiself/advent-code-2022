@@ -8,17 +8,6 @@ using namespace std;
 const int START = 1;
 const int GAP = 4;
 
-void printTable(vector<vector<char>> table) {
-    int i, j;
-    for(i = 0; i < table.size(); i++) {
-        cout << "[ ";
-        for(j = 0; j < table[i].size(); j++) {
-            cout << table[i][j] << " ";
-        }
-        cout << "]\n";
-    }
-}
-
 int main() {
     vector<vector<char>> table, table2;
     vector<int> vec;

@@ -3,14 +3,6 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int a[], int size) {
-    for(int i=0; i < size; i++) {
-        cout << a[i];
-        cout << " ";
-    }
-    cout << "\n";
-}
-
 int main() {
     int current = 0;
     int max[3] = {0,0,0};
