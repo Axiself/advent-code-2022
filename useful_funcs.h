@@ -30,3 +30,38 @@ void split (string str, char seperator, string strings[]) {
         i++;  
     }     
 }
+
+/*------------------------------------------DAY 5------------------------------------------*/
+
+int findChar(vector<char> v, char key) {
+    for(int i = 0; i < v.size(); i++)
+        if(v[i] == key)
+            return i;
+    return -1;
+}
+
+void printCharVector(vector<char> v) {
+    cout << "[ ";
+    for(int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
+    cout << "]\n";
+}
+
+void deleteCharVector(vector<char> v) {
+    for(int i = 0; i < v.size(); i++)
+        v.pop_back();
+}
+
+int repeatedChars(string s) {
+    int count;
+    for (int i= 0; i < s.size(); i++) {
+        count = 0;
+        for(int j = 0; j < s.size(); j++) {
+            if(s[i] == s[j])
+                count++;
+        }
+        if(count > 1)
+            return 1;
+    }
+    return 0;
+}
